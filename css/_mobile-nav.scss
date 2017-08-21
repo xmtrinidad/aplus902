@@ -1,0 +1,40 @@
+
+.mobile_nav {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  top: 89px;
+  left: -768px;
+  transition: left .5s;
+  .nav_row {
+    border-bottom: 2px solid lightgray;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 5px;
+    cursor: pointer;
+    &:first-child {
+      border-top: 2px solid lightgray;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.show_menu {
+  left: 0;
+}
+
+.section_title p {
+  font-size: 1.1rem !important;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}

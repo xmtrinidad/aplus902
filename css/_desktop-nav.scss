@@ -1,0 +1,48 @@
+
+.desktop_nav {
+  display: none;
+}
+
+.obj_active {
+  transform: scale(1.15,1.15);
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+/**
+TODO this border radius will probably have to be refactored after refactoring HTML
+**/
+.my_row:first-child div:first-child {
+  border-top-left-radius: 7px;
+}
+
+.my_row:last-child div:last-child {
+  border-top-right-radius: 7px;
+}
+
+// break out into one row
+@media (min-width: 768px) {
+  .desktop_nav {
+    margin: 35px auto;
+    display: flex;
+    max-width: 800px;
+    justify-content: center;
+  }
+  .my_row {
+    display: flex;
+    justify-content: space-around;
+  }
+  .my_row, .my_row:last-child {
+    width: auto;
+    margin: 0;
+    div {
+      width: 135px;
+      height: 97px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: .5;
+      transition: all .5s;
+    }
+  }
+}
