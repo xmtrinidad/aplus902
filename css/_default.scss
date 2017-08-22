@@ -6,28 +6,25 @@ svg {
   width: 44px;
 }
 
+
+
 // Shared colors: mobile and desktop section nav
-.nav_row:first-child div:first-child,
-.my_row:first-child div:first-child {
+.wosBG {
   background: $one;
 }
 
-.nav_row:nth-child(2) div:first-child,
-.my_row:first-child div:nth-child(2) {
+.oosBG {
   background: $two;
 }
 
-.nav_row:nth-child(3) div:first-child,
-.my_row:first-child div:last-child {
+.securityBG {
   background: $three;
 }
 
-.nav_row:nth-child(4) div:first-child,
-.my_row:last-child div:first-child {
+.stsBG {
   background: $four;
 }
 
-.nav_row:last-child div:first-child,
-.my_row:last-child div:last-child {
+.opBG {
   background: $five;
 }

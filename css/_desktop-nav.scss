@@ -9,14 +9,11 @@
   z-index: 1;
 }
 
-/**
-TODO this border radius will probably have to be refactored after refactoring HTML
-**/
 .my_row:first-child div:first-child {
   border-top-left-radius: 7px;
 }
 
-.my_row:last-child div:last-child {
+.my_row:first-child div:last-child {
   border-top-right-radius: 7px;
 }
 

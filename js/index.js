@@ -4,7 +4,7 @@
  * Section nav (1.0, 2.0, 3.0, etc)
  */
 $(".my_row div").on("click", function(){
-    $(this).parent().parent().find(".obj_active").removeClass("obj_active");
+    $(this).parent().find(".obj_active").removeClass("obj_active");
     $(this).addClass("obj_active");
     getTitle($(this));
 });

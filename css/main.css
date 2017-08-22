@@ -4,24 +4,19 @@ svg {
 .lock, .clipboard {
   width: 44px; }
 
-.nav_row:first-child div:first-child,
-.my_row:first-child div:first-child {
+.wosBG {
   background: #63a70a; }
 
-.nav_row:nth-child(2) div:first-child,
-.my_row:first-child div:nth-child(2) {
+.oosBG {
   background: #004e71; }
 
-.nav_row:nth-child(3) div:first-child,
-.my_row:first-child div:last-child {
+.securityBG {
   background: #f5a81c; }
 
-.nav_row:nth-child(4) div:first-child,
-.my_row:last-child div:first-child {
+.stsBG {
   background: #6e2a8d; }
 
-.nav_row:last-child div:first-child,
-.my_row:last-child div:last-child {
+.opBG {
   background: #c1d42f; }
 
 .desktop_header {
@@ -102,7 +97,7 @@ svg {
 .show_menu {
   left: 0; }
 
-.section_title p {
+.menu_title p {
   font-size: 1.1rem !important;
   text-align: center;
   font-weight: bold;
@@ -116,13 +111,10 @@ svg {
   opacity: 1 !important;
   z-index: 1; }
 
-/**
-TODO this border radius will probably have to be refactored after refactoring HTML
-**/
 .my_row:first-child div:first-child {
   border-top-left-radius: 7px; }
 
-.my_row:last-child div:last-child {
+.my_row:first-child div:last-child {
   border-top-right-radius: 7px; }
 
 @media (min-width: 768px) {
