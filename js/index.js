@@ -3,19 +3,55 @@
 /**
  * Section nav (1.0, 2.0, 3.0, etc)
  */
-$(".my_row div").on("click", function(){
-    $(this).parent().find(".obj_active").removeClass("obj_active");
-    $(this).addClass("obj_active");
-    getTitle($(this));
-});
-
-$(".nav_row").on("click", function(){
-    getTitle($(this));
-    getBackground($(this));
-    getSVG($(this));
+$(".my_row div, .nav_row").on("click", function(){
     toggleMenu($(this));
-
+    activeIcon($(this));
+    getTitle($(this));
+    getSVG($(this));
+    getBackground($(this));
 });
+
+
+// add/remove class to scale icon on desktop_nav
+function activeIcon(clicked) {
+    let sectionClassName = getSectionClassName(clicked);
+    /**
+     * Continue to activate clicked icon while screen size is mobile
+     */
+    if ($(window).width() < 768) {
+        $(".my_row").find(".obj_active").removeClass("obj_active");
+        $(".my_row").find(sectionClassName).addClass("obj_active");
+        // open/close menu when clicking
+    } else {
+        $(clicked).parent().find(".obj_active").removeClass("obj_active");
+        $(clicked).addClass("obj_active");
+    }
+}
+
+/**
+ *
+ * @param clicked the element clicked
+ * @returns { section class name}
+ * Should be first class, but just in case it isn't
+ */
+function getSectionClassName(clicked) {
+    switch(true) {
+        case ($(clicked).hasClass("wos")):
+            return ".wos";
+            break;
+        case (clicked.hasClass("oos")):
+            return ".oos";
+            break;
+        case (clicked.hasClass("security")):
+            return ".security";
+            break;
+        case (clicked.hasClass("sts")):
+            return ".sts";
+            break;
+        default:
+            return ".op";
+    }
+}
 
 // change main section title based on clicked section
 function getTitle(clicked) {
