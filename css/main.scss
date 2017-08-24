@@ -3,43 +3,24 @@
 @import "header";
 @import "mobile-nav";
 @import "desktop-nav";
+@import "objectives";
+@import "grid";
 @import "totop";
 @import "footer";
 
-
-
 main {
-  height: 1200px;
   margin-top: 90px;
+  section {
+    .section_heading {
+      text-align: center;
+    }
+  }
 }
 
-.mobile_active {
-  padding: 10px 0;
-}
-
-.mobile_active .section_svg_container {
-  margin: auto;
-  max-width: 200px;
-  height: 95px;
-  background: $one;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-
-.mobile_active svg {
-  width: 100px;
-}
-
-.section_heading {
-  text-align: center;
-}
 
 @media (min-width: 768px) {
-  .mobile_active {
-    display: none;
+  main {
+    margin-top: 45px;
   }
 }
 

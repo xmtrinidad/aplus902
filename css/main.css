@@ -1,8 +1,20 @@
+body {
+  background: whitesmoke; }
+
 svg {
   width: 65px; }
 
 .lock, .clipboard {
   width: 44px; }
+
+.objectives hr {
+  display: none; }
+
+.objective_info > ul > li {
+  font-weight: bold; }
+
+.objective_info > ul > li ul {
+  font-weight: normal; }
 
 .wosBG {
   background: #63a70a; }
@@ -19,6 +31,12 @@ svg {
 .opBG {
   background: #c1d42f; }
 
+@media (min-width: 768px) {
+  .objectives hr {
+    display: block; }
+
+  .mobile_active, .fa-chevron-right {
+    display: none; } }
 .desktop_header {
   display: none; }
 
@@ -98,10 +116,28 @@ svg {
   left: 0; }
 
 .menu_title p {
-  font-size: 1.1rem !important;
+  font-size: .98rem !important;
   text-align: center;
   font-weight: bold;
   margin: 0; }
+
+/*** TOP OF MAIN ON MOBILE ***/
+.mobile_active {
+  padding: 10px 0; }
+
+.mobile_active .section_svg_container {
+  margin: auto;
+  max-width: 200px;
+  height: 95px;
+  background: #63a70a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px; }
+
+.mobile_active svg {
+  width: 100px; }
 
 .desktop_nav {
   display: none; }
@@ -139,6 +175,63 @@ svg {
       align-items: center;
       opacity: .5;
       transition: all .5s; } }
+/*** Objectives ***/
+.objectives {
+  padding: 5px; }
+
+.objective_title {
+  cursor: pointer;
+  align-items: flex-start;
+  display: flex;
+  font-weight: bold;
+  border: 2px solid pink;
+  padding: 10px;
+  min-height: 80px; }
+  .objective_title .objective_number {
+    background: #63a70a;
+    font-size: .90rem;
+    color: #fff;
+    padding: 5px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px; }
+  .objective_title p {
+    margin: 0 0 0 10px;
+    font-size: .93rem;
+    flex: 1; }
+  .objective_title i {
+    align-self: flex-end; }
+
+/**
+TODO take note of this: Use max height and set max height for transition to something bigger than div will ever get
+**/
+.objective_info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in; }
+
+.objective_info > ul {
+  margin: 15px; }
+
+.show_info {
+  max-height: 900px; }
+
+@media (min-width: 768px) {
+  .objective_title p {
+    font-size: 1.5rem; }
+
+  .objective_info {
+    max-height: 100%; }
+
+  .objective_info > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px; } }
+.two_col {
+  grid-template-columns: 1fr 1fr; }
+
+.three_col {
+  grid-template-columns: 1fr 1fr 1fr; }
+
 .to_top {
   width: 47px;
   height: 47px;
@@ -195,31 +288,12 @@ footer {
   footer {
     grid-template-columns: 1fr 1fr 1fr; } }
 main {
-  height: 1200px;
   margin-top: 90px; }
-
-.mobile_active {
-  padding: 10px 0; }
-
-.mobile_active .section_svg_container {
-  margin: auto;
-  max-width: 200px;
-  height: 95px;
-  background: #63a70a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 7px;
-  border-bottom-right-radius: 7px; }
-
-.mobile_active svg {
-  width: 100px; }
-
-.section_heading {
-  text-align: center; }
+  main section .section_heading {
+    text-align: center; }
 
 @media (min-width: 768px) {
-  .mobile_active {
-    display: none; } }
+  main {
+    margin-top: 45px; } }
 
 /*# sourceMappingURL=main.css.map */

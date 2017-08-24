@@ -1,0 +1,76 @@
+/*** Objectives ***/
+
+.objectives {
+  padding: 5px;
+}
+
+// TODO change border or add box shadow
+.objective_title {
+  cursor: pointer;
+  align-items: flex-start;
+  display: flex;
+  font-weight: bold;
+  border: 2px solid pink;
+  padding: 10px;
+  min-height: 80px;
+  .objective_number {
+    background: $one;
+    font-size: .90rem;
+    color: #fff;
+    padding: 5px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+  p {
+    margin: 0 0 0 10px;
+    font-size: .93rem;
+    flex: 1;
+  }
+  i {
+    align-self: flex-end;
+  }
+}
+
+/**
+TODO take note of this: Use max height and set max height for transition to something bigger than div will ever get
+**/
+
+// TODO using height instead of max-height for transition but may need to change back
+.objective_info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in;
+}
+
+.objective_info > ul {
+  margin: 15px;
+}
+
+// TODO this height will probably have to change depending on content
+.show_info {
+  max-height: 900px;
+}
+
+@media (min-width: 768px) {
+  .objective_title {
+    //border: none;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .objective_info {
+    max-height: 100%;
+  }
+  .objective_info > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  // TODO I may use this, I don't know yet
+  .objective_info > ul {
+    //grid-template-columns: 1fr 1fr 1fr;
+  }
+}

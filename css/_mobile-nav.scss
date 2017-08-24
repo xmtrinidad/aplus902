@@ -33,8 +33,29 @@
 }
 
 .menu_title p {
-  font-size: 1.1rem !important;
+  font-size: .98rem !important;
   text-align: center;
   font-weight: bold;
   margin: 0;
+}
+
+/*** TOP OF MAIN ON MOBILE ***/
+.mobile_active {
+  padding: 10px 0;
+}
+
+.mobile_active .section_svg_container {
+  margin: auto;
+  max-width: 200px;
+  height: 95px;
+  background: $one;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.mobile_active svg {
+  width: 100px;
 }

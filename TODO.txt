@@ -1,0 +1,4 @@
+TODO animate dropdown arrow
+TODO fix footer
+TODO Add more content to menu
+TODO Find a way to keep footer at bottom of page

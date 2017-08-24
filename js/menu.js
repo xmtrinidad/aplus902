@@ -1,5 +1,10 @@
+let $opened = $(".opened"),
+    $closed = $(".closed"),
+    $mobileNav = $(".mobile_nav"),
+    $menu = $(".menu");
+
 // Ham menu functionality
-$(".menu").on("click", function(){
+$menu.on("click", function(){
     toggleMenu($(this));
 });
 
@@ -12,13 +17,13 @@ function toggleMenu(ele) {
 }
 
 function openMenu() {
-    $(".mobile_nav").addClass("show_menu");
-    $(".opened").show();
-    $(".closed").hide();
+    $mobileNav.addClass("show_menu");
+    $opened.show();
+    $closed.hide();
 }
 
 function closeMenu() {
-    $(".mobile_nav").removeClass("show_menu");
-    $(".opened").hide();
-    $(".closed").show();
+    $mobileNav.removeClass("show_menu");
+    $opened.hide();
+    $closed.show();
 }

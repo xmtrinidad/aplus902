@@ -1,3 +1,7 @@
+body {
+  background: whitesmoke;
+}
+
 svg {
   width: 65px;
 }
@@ -6,6 +10,20 @@ svg {
   width: 44px;
 }
 
+// horizontal rule for objective sections
+.objectives hr {
+  display: none;
+}
+
+// Target first level ul li elements
+.objective_info > ul > li {
+  font-weight: bold;
+}
+
+// 2nd level and beyond ul elements
+.objective_info > ul > li ul {
+  font-weight: normal;
+}
 
 
 // Shared colors: mobile and desktop section nav
@@ -27,4 +45,13 @@ svg {
 
 .opBG {
   background: $five;
+}
+
+@media (min-width: 768px) {
+  .objectives hr {
+    display: block;
+  }
+  .mobile_active, .fa-chevron-right {
+    display: none;
+  }
 }
