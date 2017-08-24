@@ -2,15 +2,16 @@
 
 .objectives {
   padding: 5px;
+  margin: 45px 0;
 }
 
 // TODO change border or add box shadow
 .objective_title {
   cursor: pointer;
-  align-items: flex-start;
   display: flex;
+  align-items: flex-start;
   font-weight: bold;
-  border: 2px solid pink;
+  border: 2px solid lightgray;
   padding: 10px;
   min-height: 80px;
   .objective_number {
@@ -28,7 +29,13 @@
   }
   i {
     align-self: flex-end;
+    transition: transform .3s;
   }
+}
+
+// rotate arrow down for mobile
+.arr_down {
+  transform: rotate(90deg);
 }
 
 /**
@@ -51,11 +58,15 @@ TODO take note of this: Use max height and set max height for transition to some
   max-height: 900px;
 }
 
+
+
+
 @media (min-width: 768px) {
   .objective_title {
-    //border: none;
+    border: none;
+    min-height: 0;
     p {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
   .objective_info {
@@ -72,5 +83,13 @@ TODO take note of this: Use max height and set max height for transition to some
   // TODO I may use this, I don't know yet
   .objective_info > ul {
     //grid-template-columns: 1fr 1fr 1fr;
+  }
+  // Breakout sub menus into two columns if necessary
+  .submenu > li ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    font-size: .95rem;
+    margin: 5px 0;
   }
 }

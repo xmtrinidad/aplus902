@@ -161,30 +161,28 @@ svg {
     justify-content: center; }
 
   .my_row {
-    display: flex;
-    justify-content: space-around; }
+    display: flex; }
 
-  .my_row, .my_row:last-child {
-    width: auto;
-    margin: 0; }
-    .my_row div, .my_row:last-child div {
-      width: 135px;
-      height: 97px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: .5;
-      transition: all .5s; } }
+  .my_row div {
+    cursor: pointer;
+    width: 135px;
+    height: 97px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    transition: all .5s; } }
 /*** Objectives ***/
 .objectives {
-  padding: 5px; }
+  padding: 5px;
+  margin: 45px 0; }
 
 .objective_title {
   cursor: pointer;
-  align-items: flex-start;
   display: flex;
+  align-items: flex-start;
   font-weight: bold;
-  border: 2px solid pink;
+  border: 2px solid lightgray;
   padding: 10px;
   min-height: 80px; }
   .objective_title .objective_number {
@@ -199,7 +197,11 @@ svg {
     font-size: .93rem;
     flex: 1; }
   .objective_title i {
-    align-self: flex-end; }
+    align-self: flex-end;
+    transition: transform .3s; }
+
+.arr_down {
+  transform: rotate(90deg); }
 
 /**
 TODO take note of this: Use max height and set max height for transition to something bigger than div will ever get
@@ -216,8 +218,11 @@ TODO take note of this: Use max height and set max height for transition to some
   max-height: 900px; }
 
 @media (min-width: 768px) {
-  .objective_title p {
-    font-size: 1.5rem; }
+  .objective_title {
+    border: none;
+    min-height: 0; }
+    .objective_title p {
+      font-size: 1.6rem; }
 
   .objective_info {
     max-height: 100%; }
@@ -226,6 +231,13 @@ TODO take note of this: Use max height and set max height for transition to some
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px; } }
+@media (min-width: 1200px) {
+  .submenu > li ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    font-size: .95rem;
+    margin: 5px 0; } }
 .two_col {
   grid-template-columns: 1fr 1fr; }
 
@@ -248,49 +260,11 @@ TODO take note of this: Use max height and set max height for transition to some
   align-items: center; }
 
 footer {
-  padding: 30px 0 30px 0;
-  background: #5c7684;
-  color: #fff;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px; }
-  footer ul, footer p, footer a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: inherit; }
-  footer .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  footer .social {
-    margin: auto;
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.3rem; }
-  footer .about {
-    text-align: justify; }
-  footer .title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.8rem; }
-  footer .info {
-    width: 90%;
-    margin: auto; }
+  height: 100px;
+  background: #5c7684; }
 
-@media (min-width: 768px) {
-  footer {
-    grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1200px) {
-  footer {
-    grid-template-columns: 1fr 1fr 1fr; } }
-main {
-  margin-top: 90px; }
-  main section .section_heading {
-    text-align: center; }
+main section .section_heading {
+  text-align: center; }
 
 @media (min-width: 768px) {
   main {
