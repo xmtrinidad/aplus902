@@ -272,11 +272,18 @@ main {
 section {
   display: none; }
 
+.section_heading h2 {
+  font-size: 2.2rem;
+  font-weight: 400; }
+
 .curr {
   display: inherit; }
 
 @media (min-width: 768px) {
   main {
-    margin-top: 45px; } }
+    margin-top: 45px; }
+
+  .section_heading h2 {
+    font-size: 3.1rem; } }
 
 /*# sourceMappingURL=main.css.map */

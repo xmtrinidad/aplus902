@@ -162,7 +162,7 @@
     </header>
     <!-- /desktop_header -->
 
-    <main>
+    <main class="container">
         <!-- mobile active svg at top -->
         <div class="mobile_active">
             <div class="section_svg_container">
@@ -170,8 +170,6 @@
             </div>
         </div>
         <!-- /mobile active svg at top -->
-
-
 
         <!-- section select -->
         <div class="desktop_nav">
@@ -205,7 +203,7 @@
         </div>
         <hr>
         <!-- 1.0 Windows Operating Systems -->
-        <section class="wos container curr">
+        <section class="wos curr">
 
             <div class="objectives">
                 <!-- 1.1 -->
@@ -572,7 +570,7 @@
         </section>
 
         <!-- 2.0 Other Operating Systems and Technologies -->
-        <section class="oos container">
+        <section class="oos">
 
             <div class="objectives">
                 <!-- 2.1 -->
@@ -826,7 +824,7 @@
         </section>
 
         <!-- 3.0 Security -->
-        <section class="security container">
+        <section class="security">
 
             <div class="objectives">
                 <!-- 3.1 -->
@@ -1114,7 +1112,7 @@
         </section>
 
         <!-- 4.0 Software Troubleshooting -->
-        <section class="sts container">
+        <section class="sts">
 
             <div class="objectives">
                 <!-- 4.1 -->
@@ -1126,32 +1124,42 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </div>
                     <div class="objective_info">
-                        <ul>
+                        <ul class="submenu">
                             <li>
-                                Features
+                                Common symptoms
                                 <ul>
-                                    <li>32-bit vs 64-bit</li>
-                                    <li>Aero, gadgets, user account control,
-                                        BitLocker, shadow copy, system
-                                        restore, ready boost, sidebar,
-                                        compatibility mode, virtual XP
-                                        mode, easy transfer, administrative
-                                        tools, defender, Windows firewall,
-                                        security center, event viewer,
-                                        file structure and paths,
-                                        category view vs. classic view
-                                    </li>
-                                    <li>Side-by-side apps, Metro UI, Pinning,
-                                        One Drive, Windows store, multimonitor
-                                        task bars, charms, Start Screen,
-                                        PowerShell, Live sign in, Action Center
-                                    </li>
+                                    <li>Proprietary crash screens (BSOD/pinwheel)</li>
+                                    <li>Failure to boot, Improper shutdown</li>
+                                    <li>Spontaneous shutdown/restart</li>
+                                    <li>Device fails to start/detected</li>
+                                    <li>Missing DLL message, Services fails to start</li>
+                                    <li>Compatibility error, Slow system performance</li>
+                                    <li>Boots to safe mode, file fails to open</li>
+                                    <li>Missing NTLDR, Missing boot configuration data</li>
+                                    <li>Missing operating system, Missing operating system</li>
+                                    <li>Missing graphical interface, Missing GRUB/LILO</li>
+                                    <li>Kernel panic</li>
+                                    <li>Graphical interface fails to load</li>
+                                    <li>Multiple monitor misalignment/orientation</li>
                                 </ul>
                             </li>
                             <li>
-                                Upgrade paths – differences between
-                                in place upgrades, compatibility
-                                tools, Windows upgrade OS advisor
+                                Tools
+                                <ul>
+                                    <li>BIOS/UEFI, SFC</li>
+                                    <li>Logs</li>
+                                    <li>System Recovery Options</li>
+                                    <li>Repair disks</li>
+                                    <li>Pre-installation environments</li>
+                                    <li>MSCONFIG</li>
+                                    <li>DEFRAG</li>
+                                    <li>REGSRV32</li>
+                                    <li>REGEDIT</li>
+                                    <li>Event viewer</li>
+                                    <li>Safe mode</li>
+                                    <li>Command prompt</li>
+                                    <li>Uninstall/reinstall/repair</li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -1167,49 +1175,59 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </div>
                     <div class="objective_info">
-                        <ul class="submenu">
+                        <ul>
                             <li>
-                                Boot Methods
+                                Common symptoms
                                 <ul>
-                                    <li>USB, CD-ROM, DVD, PXE</li>
-                                    <li>Solid state/flash drives, Netboot</li>
-                                    <li>External/hot swappable drive</li>
-                                    <li>Internal hard drive (partition)</li>
+                                    <li>Pop-ups, Browser redirection</li>
+                                    <li>Security alerts, Slow performance</li>
+                                    <li>Internet connectivity issues, PC/OS lock up</li>
+                                    <li>Application crash, OS updates failures</li>
+                                    <li>Rogue antivirus, Spam</li>
+                                    <li>Renamed system files, Files disappearing</li>
+                                    <li>File permission changes</li>
+                                    <li>
+                                        Hijacked email
+                                        <ul>
+                                            <li>Responses from users regarding email</li>
+                                            <li>Automated replies form unknown sent email</li>
+                                        </ul>
+                                    </li>
+                                    <li>Access denied, Inavalid certificate (trusted root CA</li>
                                 </ul>
                             </li>
                             <li>
-                                Type of installations
+                                Tools
                                 <ul>
-                                    <li>Unattended installation</li>
-                                    <li>Upgrade, clean install, repair installation</li>
-                                    <li>Multiboot, remote network installation</li>
-                                    <li>Image deployment, recovery partition, Refresh/restore</li>
+                                    <li>Antivirus software</li>
+                                    <li>Anti-malware software</li>
+                                    <li>Recovery console</li>
+                                    <li>Terminal</li>
+                                    <li>System restore/Snapshot</li>
+                                    <li>Pre-installation environments</li>
+                                    <li>Event viewer</li>
+                                    <li>Refresh/restore</li>
+                                    <li>MSCONFIG/Safe boot</li>
                                 </ul>
                             </li>
                             <li>
-                                Partitioning
-                                <ul>
-                                    <li>Dynamic, Basic</li>
-                                    <li>Primary</li>
-                                    <li>Extended</li>
-                                    <li>Logical, GPT</li>
+                                Best practice procedure for malware removal
+                                <ul style="list-style: decimal;">
+                                    <li>Identify malware symptoms</li>
+                                    <li>Quarantine infected system</li>
+                                    <li>Disable system restore (in Windows)</li>
+                                    <li>
+                                        Remediate infected systems
+                                        <ul style="list-style: lower-alpha;">
+                                            <li>Update anti-malware software</li>
+                                            <li>Scan and removal techniques (safe mode, pre-installation environment</li>
+                                        </ul>
+                                    </li>
+                                    <li>Schedule scans and run updates</li>
+                                    <li>Enable system restore and create restore point (in Windows)</li>
+                                    <li>Educate end user</li>
                                 </ul>
                             </li>
-                            <li>
-                                File system types/formatting
-                                <ul>
-                                    <li>exFAT, FAT32</li>
-                                    <li>NTFS, CDFS, NFS</li>
-                                    <li>ext3, ext4</li>
-                                    <li>Quick formas vs full format</li>
-                                </ul>
-                            </li>
-                            <li>Load alternate third-party drivers when necessary</li>
-                            <li>Workgroup vs domain setup</li>
-                            <li>Time/date/region/language settings</li>
-                            <li>Driver installation, software and Windows updates</li>
-                            <li>Factory recovery partition</li>
-                            <li>Properly formatted boot drive with the correct partitions/format</li>
                         </ul>
                     </div>
                 </div>
@@ -1225,30 +1243,30 @@
                     </div>
                     <div class="objective_info">
                         <ul>
-                            <li>TASKKILL</li>
-                            <li>BOOTREC</li>
-                            <li>SHUTDOWN</li>
-                            <li>TASKLIST</li>
-                            <li>MD</li>
-                            <li>RD</li>
-                            <li>CD</li>
-                            <li>DEL</li>
-                            <li>FORMAT</li>
-                            <li>COPY</li>
-                            <li>XCOPY</li>
-                            <li>ROBOCOPY</li>
-                            <li>DISKPART</li>
-                            <li>SFC</li>
-                            <li>CHKDSK</li>
-                            <li>GPUPDATE</li>
-                            <li>GUPRESULT</li>
-                            <li>DIR</li>
-                            <li>EXIT</li>
-                            <li>HELP</li>
-                            <li>EXPAND</li>
-                            <li>[command name] /?</li>
-                            <li>Commands available with standard privileges
-                                vs. administrative privileges</li>
+                            <li>
+                                Common symptoms
+                                <ul>
+                                    <li>Dim display, Intermittent wireless</li>
+                                    <li>No wireless connectivity, No Bluetooth connectivity</li>
+                                    <li>Cannot broadcast to external monitor</li>
+                                    <li>Touchscreen non-responsive, Apps not loading, Slow performance</li>
+                                    <li>Unable to decrypt email, Extremely short battery life, Overheating</li>
+                                    <li>Frozen system, No sound from speakers</li>
+                                    <li>Inaccurate touch screen response, System lockout</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Tools
+                                <ul>
+                                    <li>Hard reset</li>
+                                    <li>Soft reset</li>
+                                    <li>Close running applications</li>
+                                    <li>Reset to factory default</li>
+                                    <li>Adjust configurations/settings</li>
+                                    <li>Uninstall/reinstall apps</li>
+                                    <li>Force stop</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1263,65 +1281,38 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </div>
                     <div class="objective_info">
-                        <ul class="submenu">
+                        <ul>
                             <li>
-                                Administrative
+                                Common symptoms
                                 <ul>
-                                    <li>Computer management, Device manager</li>
-                                    <li>Local users and groups, Local security policty</li>
-                                    <li>Performance monitor, Services, System configuration</li>
-                                    <li>Task scheduler, Component services,
-                                        Data sources, Print Management</li>
-                                    <li>Windows memory diagnostics,
-                                        Windows firewall, Advaned Security</li>
+                                    <li>Signal drop/weak signal, Power drain</li>
+                                    <li>Slow data speeds, Unintended WiFi connection</li>
+                                    <li>Unintended Bluetooth pairing, Leaked personal files/data</li>
+                                    <li>Data transmission overlimit, Unauthorized account access</li>
+                                    <li>Unauthroized account access</li>
+                                    <li>Unauthroized root access, Unauthorized location tracking</li>
+                                    <li>Unauthorized camera/microphone activation</li>
+                                    <li>High resource utilization</li>
                                 </ul>
                             </li>
                             <li>
-                                MSCONFIG
+                                Tools
                                 <ul>
-                                    <li>General</li>
-                                    <li>Boot</li>
-                                    <li>Services</li>
-                                    <li>Startup</li>
-                                    <li>Tools</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Task Manager
-                                <ul>
-                                    <li>Applications</li>
-                                    <li>Processes</li>
-                                    <li>Performance</li>
-                                    <li>Networking</li>
-                                    <li>Users</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Disk management
-                                <ul>
-                                    <li>Drive status, Mounting</li>
-                                    <li>Initializing, Extending partitions</li>
-                                    <li>Splitting partitions, shrink partitions</li>
-                                    <li>Assigning/changing drive letters, Adding drives</li>
-                                    <li>Adding arrays, Storage spaces</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Other
-                                <ul>
-                                    <li>User State Migration tool (USMT)</li>
-                                    <li>Windows Easy Transfer</li>
-                                    <li>Windows UPgrade Advisor</li>
-                                </ul>
-                            </li>
-                            <li>
-                                System utilities
-                                <ul>
-                                    <li>REGEDIT, COMMAND</li>
-                                    <li>SERVICES MSC, MMC, MSTSC</li>
-                                    <li>NOTEPAD, EXPLORER</li>
-                                    <li>DXDIAG, DEFRAG, MSINFO32</li>
-                                    <li>System restore, Windows Update</li>
+                                    <li>Anti-malware</li>
+                                    <li>App scanner</li>
+                                    <li>Factory reset/clean install</li>
+                                    <li>Uninstall/reinstall apps</li>
+                                    <li>WiFi analyzer</li>
+                                    <li>Force stop</li>
+                                    <li>Cell tower analyzer</li>
+                                    <li>
+                                        Backup/restore
+                                        <ul>
+                                            <li>iTunes/iCloud/Apple Configurator</li>
+                                            <li>Google Sync</li>
+                                            <li>One Drive</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -1333,7 +1324,7 @@
         </section>
 
         <!-- 5.0 Operational Procedures -->
-        <section class="op container">
+        <section class="op">
 
             <div class="op objectives">
                 <!-- 5.1 -->
@@ -1345,31 +1336,33 @@
                     </div>
                     <div class="objective_info">
                         <ul>
+                            <li>Equipment grounding</li>
+                            <li>Compliance with local government regulations</li>
                             <li>
-                                Features
+                                Proper component handling and storage
                                 <ul>
-                                    <li>32-bit vs 64-bit</li>
-                                    <li>Aero, gadgets, user account control,
-                                        BitLocker, shadow copy, system
-                                        restore, ready boost, sidebar,
-                                        compatibility mode, virtual XP
-                                        mode, easy transfer, administrative
-                                        tools, defender, Windows firewall,
-                                        security center, event viewer,
-                                        file structure and paths,
-                                        category view vs. classic view
-                                    </li>
-                                    <li>Side-by-side apps, Metro UI, Pinning,
-                                        One Drive, Windows store, multimonitor
-                                        task bars, charms, Start Screen,
-                                        PowerShell, Live sign in, Action Center
-                                    </li>
+                                    <li>Anti-static bags</li>
+                                    <li>ESD straps, ESD mats</li>
+                                    <li>Self-grounding</li>
                                 </ul>
                             </li>
                             <li>
-                                Upgrade paths – differences between
-                                in place upgrades, compatibility
-                                tools, Windows upgrade OS advisor
+                                Toxic waste handling
+                                <ul>
+                                    <li>Batteries</li>
+                                    <li>Toner</li>
+                                    <li>CRT</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Personal safety
+                                <ul>
+                                    <li>Disconnect power before repairing PC</li>
+                                    <li>Remove jewelry, Lifting techniques</li>
+                                    <li>Weight limitations, Electrical fire safety</li>
+                                    <li>Cable management, Safety goggles</li>
+                                    <li>Air filter mask</li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -1385,49 +1378,31 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </div>
                     <div class="objective_info">
-                        <ul class="submenu">
+                        <ul>
+                            <li>MSDS documentation for handling and disposal</li>
+                            <li>Temperatur, humidity level awareness and proper ventilation</li>
                             <li>
-                                Boot Methods
+                                Power surges, brownouts, blackouts
                                 <ul>
-                                    <li>USB, CD-ROM, DVD, PXE</li>
-                                    <li>Solid state/flash drives, Netboot</li>
-                                    <li>External/hot swappable drive</li>
-                                    <li>Internal hard drive (partition)</li>
+                                    <li>Battery backup</li>
+                                    <li>Surge suppresor</li>
                                 </ul>
                             </li>
                             <li>
-                                Type of installations
+                                Protection from airborne particles
                                 <ul>
-                                    <li>Unattended installation</li>
-                                    <li>Upgrade, clean install, repair installation</li>
-                                    <li>Multiboot, remote network installation</li>
-                                    <li>Image deployment, recovery partition, Refresh/restore</li>
+                                    <li>Enclosures</li>
+                                    <li>SAir filters/mask</li>
                                 </ul>
                             </li>
                             <li>
-                                Partitioning
+                                Dust and debris
                                 <ul>
-                                    <li>Dynamic, Basic</li>
-                                    <li>Primary</li>
-                                    <li>Extended</li>
-                                    <li>Logical, GPT</li>
+                                    <li>Compressed air</li>
+                                    <li>Vacuums</li>
                                 </ul>
                             </li>
-                            <li>
-                                File system types/formatting
-                                <ul>
-                                    <li>exFAT, FAT32</li>
-                                    <li>NTFS, CDFS, NFS</li>
-                                    <li>ext3, ext4</li>
-                                    <li>Quick formas vs full format</li>
-                                </ul>
-                            </li>
-                            <li>Load alternate third-party drivers when necessary</li>
-                            <li>Workgroup vs domain setup</li>
-                            <li>Time/date/region/language settings</li>
-                            <li>Driver installation, software and Windows updates</li>
-                            <li>Factory recovery partition</li>
-                            <li>Properly formatted boot drive with the correct partitions/format</li>
+                            <li>Compliance to local government regulations</li>
                         </ul>
                     </div>
                 </div>
@@ -1443,30 +1418,35 @@
                     </div>
                     <div class="objective_info">
                         <ul>
-                            <li>TASKKILL</li>
-                            <li>BOOTREC</li>
-                            <li>SHUTDOWN</li>
-                            <li>TASKLIST</li>
-                            <li>MD</li>
-                            <li>RD</li>
-                            <li>CD</li>
-                            <li>DEL</li>
-                            <li>FORMAT</li>
-                            <li>COPY</li>
-                            <li>XCOPY</li>
-                            <li>ROBOCOPY</li>
-                            <li>DISKPART</li>
-                            <li>SFC</li>
-                            <li>CHKDSK</li>
-                            <li>GPUPDATE</li>
-                            <li>GUPRESULT</li>
-                            <li>DIR</li>
-                            <li>EXIT</li>
-                            <li>HELP</li>
-                            <li>EXPAND</li>
-                            <li>[command name] /?</li>
-                            <li>Commands available with standard privileges
-                                vs. administrative privileges</li>
+                            <li>
+                                Incident Response
+                                <ul>
+                                    <li>
+                                        First response
+                                        <ul>
+                                            <li>Identify</li>
+                                            <li>Report through proper channels</li>
+                                            <li>Data/device preservation</li>
+                                        </ul>
+                                    </li>
+                                    <li>User of documentation/documentation changes</li>
+                                    <li>
+                                        Chain of custody
+                                        <ul>
+                                            <li>Tracking of evidence/documenting process</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Licensing/DRM/EULA
+                                <ul>
+                                    <li>Open source vs. commercial license</li>
+                                    <li>Personal license vs. enterprise licenses</li>
+                                </ul>
+                            </li>
+                            <li>Personally Identifiable Information</li>
+                            <li>Follow corporate end-user policies and security best practices</li>
                         </ul>
                     </div>
                 </div>
@@ -1480,65 +1460,49 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </div>
                     <div class="objective_info">
-                        <ul class="submenu">
+                        <ul>
+                            <li>Use proper language - avoid jargon, acronyms and slang when applicable</li>
+                            <li>Maintain a positive attitude/project confidence</li>
+                            <li>Actively listen (taking notes) and avoid interrupting the customer</li>
+                            <li>Be on time (if late contact the customer)</li>
                             <li>
-                                Administrative
+                                Be culturally sensitive
                                 <ul>
-                                    <li>Computer management, Device manager</li>
-                                    <li>Local users and groups, Local security policty</li>
-                                    <li>Performance monitor, Services, System configuration</li>
-                                    <li>Task scheduler, Component services,
-                                        Data sources, Print Management</li>
-                                    <li>Windows memory diagnostics,
-                                        Windows firewall, Advaned Security</li>
+                                    <li>Use appropriate professional titles, when applicable</li>
                                 </ul>
                             </li>
                             <li>
-                                MSCONFIG
+                                Deal appropriately with customers confidential and private materials
                                 <ul>
-                                    <li>General</li>
-                                    <li>Boot</li>
-                                    <li>Services</li>
-                                    <li>Startup</li>
-                                    <li>Tools</li>
+                                    <li>Located on a computer, desktop, printer, etc</li>
                                 </ul>
                             </li>
                             <li>
-                                Task Manager
+                                Avoid distractions
                                 <ul>
-                                    <li>Applications</li>
-                                    <li>Processes</li>
-                                    <li>Performance</li>
-                                    <li>Networking</li>
-                                    <li>Users</li>
+                                    <li>Personal calls, Texting/social media sites</li>
+                                    <li>Talking to co-workers while interacting with customers</li>
+                                    <li>Personal interruptions</li>
                                 </ul>
                             </li>
                             <li>
-                                Disk management
+                                Set and meet expectations/timeline and community status with the customer
                                 <ul>
-                                    <li>Drive status, Mounting</li>
-                                    <li>Initializing, Extending partitions</li>
-                                    <li>Splitting partitions, shrink partitions</li>
-                                    <li>Assigning/changing drive letters, Adding drives</li>
-                                    <li>Adding arrays, Storage spaces</li>
+                                    <li>Offer different repair/replacement options if applicable</li>
+                                    <li>Provide proper documentation on the services provided</li>
+                                    <li>Follow up with customer/user at a later date to verify satisfaction</li>
                                 </ul>
                             </li>
                             <li>
-                                Other
+                                Dealing with difficult customer or situation
                                 <ul>
-                                    <li>User State Migration tool (USMT)</li>
-                                    <li>Windows Easy Transfer</li>
-                                    <li>Windows UPgrade Advisor</li>
-                                </ul>
-                            </li>
-                            <li>
-                                System utilities
-                                <ul>
-                                    <li>REGEDIT, COMMAND</li>
-                                    <li>SERVICES MSC, MMC, MSTSC</li>
-                                    <li>NOTEPAD, EXPLORER</li>
-                                    <li>DXDIAG, DEFRAG, MSINFO32</li>
-                                    <li>System restore, Windows Update</li>
+                                    <li>Do not argue with customers and/or be defensive</li>
+                                    <li>Avoid dismissing customer problems</li>
+                                    <li>Avoid being judgmental</li>
+                                    <li>Clarify customer statements (ask open-ended questions
+                                        to narrow the scope of the problem, restate the issue
+                                        or question to verify understanding)</li>
+                                    <li>Do not disclose experiences via socila media outlets</li>
                                 </ul>
                             </li>
                         </ul>
@@ -1556,54 +1520,43 @@
                     <div class="objective_info">
                         <ul>
                             <li>
-                                Internet options
-                                <ul>
-                                    <li>Connections, Security</li>
-                                    <li>General, Privacy</li>
-                                    <li>Programs, Advanced</li>
+                                Always consider corporate policies, procedures and impacts
+                                before implementing changes
+                                <ul style="list-style: decimal">
+                                    <li>
+                                        Identify the problem
+                                        <ul>
+                                            <li>Question the user and identify user changes
+                                                to computer and perform backups before making changes</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Establish a theory of probable cause (question the obvious)
+                                        <ul>
+                                            <li>If necessary, conduct external or internal research
+                                                based on symptoms
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Test the theory to determine cause
+                                        <ul>
+                                            <li>Once theory is confirmed, determine
+                                                next steps to resolve problem
+                                            </li>
+                                            <li>
+                                                If theory is not confirmed, re-establish
+                                                new theory or escalate
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Establish a plan of action to resolve
+                                        the problem and implement the solution</li>
+                                    <li>Verify full system functionality and
+                                        if applicable implement preventive measures</li>
+                                    <li>Document findings, actions and outcomes</li>
                                 </ul>
                             </li>
-                            <li>
-                                Display/display settings
-                                <ul>
-                                    <li>Resolution</li>
-                                    <li>Color depth</li>
-                                    <li>Refresh rate</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Folder options
-                                <ul>
-                                    <li>View hidden files</li>
-                                    <li>Hide extensions, General options</li>
-                                    <li>View options</li>
-                                </ul>
-                            </li>
-                            <li>
-                                System
-                                <ul>
-                                    <li>Performance (virtual memory)</li>
-                                    <li>Remote settings</li>
-                                    <li>System protection</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Power options
-                                <ul>
-                                    <li>Hibernate, Power plans</li>
-                                    <li>Sleep/suspend</li>
-                                    <li>Standby</li>
-                                </ul>
-                            </li>
-                            <li>User accounts</li>
-                            <li>Windows firewall</li>
-                            <li>Programs and features</li>
-                            <li>HomeGroup</li>
-                            <li>Devices and printers</li>
-                            <li>Sound</li>
-                            <li>Troubleshooting</li>
-                            <li>Network and Sharing Center</li>
-                            <li>Device Manager</li>
                         </ul>
                     </div>
                 </div>
