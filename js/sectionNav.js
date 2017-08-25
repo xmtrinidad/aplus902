@@ -1,14 +1,53 @@
+let $desktopIcons = $(".my_row div");
+let $mobileIcons = $(".nav_row");
+
 /**
  * Section nav (1.0, 2.0, 3.0, etc)
  */
-$(".my_row div, .nav_row").on("click", function(){
-    toggleMenu($(this));
-    activeIcon($(this));
-    getTitle($(this));
-    getSVG($(this));
-    getBackground($(this));
+$desktopIcons.add($mobileIcons).on("click", function(){
+    let $this = $(this);
+    toggleMenu($this);
+    activeIcon($this);
+    getTitle($this);
+    getSVG($this);
+    getBackgroundColor($this);
+    getSection($this);
 });
 
+// background color for objective numbers and svg on mobile
+function getBackgroundColor(clicked) {
+    let $objectiveNumber = $(".objective_number");
+    let $svgContainer = $(".section_svg_container");
+    switch(true) {
+        case ($(clicked).hasClass("wos")):
+            $objectiveNumber.css('background', wosBG);
+            $svgContainer.css('background', wosBG);
+            break;
+        case (clicked.hasClass("oos")):
+            $objectiveNumber.css('background', oosBG);
+            $svgContainer.css('background', oosBG);
+            break;
+        case (clicked.hasClass("security")):
+            $objectiveNumber.css('background', securityBG);
+            $svgContainer.css('background', securityBG);
+            break;
+        case (clicked.hasClass("sts")):
+            $objectiveNumber.css('background', stsBG);
+            $svgContainer.css('background', stsBG);
+            break;
+        default:
+            $objectiveNumber.css('background', opBG);
+            $svgContainer.css('background', opBG);
+    }
+}
+
+// switch out sections depending on icon clicked
+function getSection(clicked) {
+    let sectionClassName = getSectionClassName(clicked);
+    let $section = $("section");
+    $section.parent().find(".curr").removeClass("curr");
+    $section.parent().find(sectionClassName).addClass("curr");
+}
 
 // add/remove class to scale icon on desktop_nav
 function activeIcon(clicked) {
@@ -93,22 +132,3 @@ function getSVG(clicked) {
     }
 }
 
-function getBackground(clicked) {
-    let $svgContainer = $(".section_svg_container");
-    switch(true) {
-        case ($(clicked).hasClass("wos")):
-            $svgContainer.css('background', wosBG);
-            break;
-        case (clicked.hasClass("oos")):
-            $svgContainer.css('background', oosBG);
-            break;
-        case (clicked.hasClass("security")):
-            $svgContainer.css('background', securityBG);
-            break;
-        case (clicked.hasClass("sts")):
-            $svgContainer.css('background', stsBG);
-            break;
-        default:
-            $svgContainer.css('background', opBG);
-    }
-}
