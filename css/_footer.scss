@@ -1,4 +1,72 @@
 footer {
-  height: 100px;
+  padding: 20px 0;
+  color: #fff;
   background: #5c7684;
+  h3 {
+    text-align: center;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color: lightblue;
+    }
+  }
+}
+
+.social {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    li {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background .2s;
+      border-radius: 100%;
+      i {
+        font-size: 2.2rem;
+      }
+      a {
+        padding: 10px;
+        &:hover, &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+.project {
+  margin-top: 10px;
+}
+
+// Social icon background colors
+.social ul li:first-child:hover {
+  background: $mail;
+}
+
+.social ul li:nth-child(2):hover {
+  background: $github;
+}
+
+.social ul li:nth-child(3):hover {
+  background: $codepen;
+}
+
+.social ul li:nth-child(4):hover {
+  background: $reddit;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+  }
 }

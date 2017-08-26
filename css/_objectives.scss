@@ -2,11 +2,11 @@
 
 .objectives {
   padding: 5px;
-  margin: 45px 0;
+  margin: 25px 0;
 }
 
-// TODO change border or add box shadow
 .objective_title {
+  margin-top: 5px;
   cursor: pointer;
   display: flex;
   align-items: flex-start;
@@ -38,11 +38,7 @@
   transform: rotate(90deg);
 }
 
-/**
-TODO take note of this: Use max height and set max height for transition to something bigger than div will ever get
-**/
 
-// TODO using height instead of max-height for transition but may need to change back
 .objective_info {
   max-height: 0;
   overflow: hidden;
@@ -53,7 +49,6 @@ TODO take note of this: Use max height and set max height for transition to some
   margin: 15px;
 }
 
-// TODO this height will probably have to change depending on content
 .show_info {
   max-height: 900px;
 }
@@ -81,16 +76,15 @@ TODO take note of this: Use max height and set max height for transition to some
 }
 
 @media (min-width: 1200px) {
-  // TODO I may use this, I don't know yet
-  .objective_info > ul {
-    //grid-template-columns: 1fr 1fr 1fr;
+  .three_col > ul {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   // Breakout sub menus into two columns if necessary
   .submenu > li ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5px;
-    font-size: .95rem;
+    //font-size: .95rem;
     margin: 5px 0;
   }
 }

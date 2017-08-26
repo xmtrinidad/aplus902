@@ -1,6 +1,3 @@
-// TODO refactor if possible
-
-
 // Dropdown objectives
 $(".objective_title").on("click", function(){
     if ($(window).width() >= 768) {

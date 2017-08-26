@@ -12,32 +12,51 @@ $desktopIcons.add($mobileIcons).on("click", function(){
     getSVG($this);
     getBackgroundColor($this);
     getSection($this);
+    toTopAndClose()
 });
+
+function toTopAndClose() {
+    let position = $(document).scrollTop();
+    // Prevent scroll to top if viewport is less than 300 height
+    if (position <= 300 && $(window).width() >= 768) {
+        return;
+    }
+    window.scrollTo(0, 0);
+
+    // Close open dropdowns when switching objectives
+    $(".show_info").removeClass("show_info");
+}
 
 // background color for objective numbers and svg on mobile
 function getBackgroundColor(clicked) {
     let $objectiveNumber = $(".objective_number");
     let $svgContainer = $(".section_svg_container");
+    let $sectionTitle = $(".section_heading h2");
     switch(true) {
         case ($(clicked).hasClass("wos")):
             $objectiveNumber.css('background', wosBG);
             $svgContainer.css('background', wosBG);
+            $sectionTitle.css('color', wosBG);
             break;
         case (clicked.hasClass("oos")):
             $objectiveNumber.css('background', oosBG);
             $svgContainer.css('background', oosBG);
+            $sectionTitle.css('color', oosBG);
             break;
         case (clicked.hasClass("security")):
             $objectiveNumber.css('background', securityBG);
             $svgContainer.css('background', securityBG);
+            $sectionTitle.css('color', securityBG);
             break;
         case (clicked.hasClass("sts")):
             $objectiveNumber.css('background', stsBG);
             $svgContainer.css('background', stsBG);
+            $sectionTitle.css('color', stsBG);
             break;
         default:
             $objectiveNumber.css('background', opBG);
             $svgContainer.css('background', opBG);
+            $sectionTitle.css('color', opBG);
     }
 }
 
