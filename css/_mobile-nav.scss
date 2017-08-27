@@ -59,3 +59,20 @@
 .mobile_active svg {
   width: 100px;
 }
+
+@media screen and (orientation:landscape) {
+  .mobile_nav {
+    height: 285px;
+    overflow: scroll;
+  }
+}
+
+/* For iPhone5 in landscape */
+@media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+  and (orientation : landscape) {
+    .mobile_nav {
+      height: 240px;
+    }
+}

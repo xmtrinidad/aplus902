@@ -46,6 +46,11 @@ svg {
   background: $five;
 }
 
+li {
+  margin-top: 5px;
+  //padding: 2px;
+}
+
 @media (min-width: 768px) {
   .objectives hr {
     display: block;

@@ -31,6 +31,9 @@ svg {
 .opBG {
   background: #c1d42f; }
 
+li {
+  margin-top: 5px; }
+
 @media (min-width: 768px) {
   .objectives hr {
     display: block; }
@@ -139,6 +142,14 @@ svg {
 .mobile_active svg {
   width: 100px; }
 
+@media screen and (orientation: landscape) {
+  .mobile_nav {
+    height: 285px;
+    overflow: scroll; } }
+/* For iPhone5 in landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  .mobile_nav {
+    height: 240px; } }
 .desktop_nav {
   display: none; }
 
@@ -195,7 +206,7 @@ svg {
     border-bottom-left-radius: 9px; }
   .objective_title p {
     margin: 0 0 0 10px;
-    font-size: .93rem;
+    font-size: .95rem;
     flex: 1; }
   .objective_title i {
     align-self: flex-end;
@@ -207,13 +218,13 @@ svg {
 .objective_info {
   max-height: 0;
   overflow: hidden;
-  transition: all .5s ease-in; }
+  transition: all .7s ease-in-out; }
 
 .objective_info > ul {
   margin: 15px; }
 
 .show_info {
-  max-height: 900px; }
+  max-height: 1500px; }
 
 @media (min-width: 768px) {
   .objective_title {
@@ -232,6 +243,7 @@ svg {
     grid-column-gap: 20px; } }
 @media (min-width: 1200px) {
   .three_col > ul {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr; }
 
   .submenu > li ul {
@@ -239,12 +251,6 @@ svg {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5px;
     margin: 5px 0; } }
-.two_col {
-  grid-template-columns: 1fr 1fr; }
-
-.three_col {
-  grid-template-columns: 1fr 1fr 1fr; }
-
 .to_top {
   width: 47px;
   height: 47px;

@@ -24,7 +24,7 @@
   }
   p {
     margin: 0 0 0 10px;
-    font-size: .93rem;
+    font-size: .95rem;
     flex: 1;
   }
   i {
@@ -38,19 +38,20 @@
   transform: rotate(90deg);
 }
 
-
+// Hide info on mobile for dropdown
 .objective_info {
   max-height: 0;
   overflow: hidden;
-  transition: all .5s ease-in;
+  transition: all .7s ease-in-out;
 }
 
 .objective_info > ul {
   margin: 15px;
 }
 
+// If drop downs are cut off, adjust this
 .show_info {
-  max-height: 900px;
+  max-height: 1500px;
 }
 
 
@@ -77,6 +78,7 @@
 
 @media (min-width: 1200px) {
   .three_col > ul {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
   // Breakout sub menus into two columns if necessary
@@ -84,7 +86,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5px;
-    //font-size: .95rem;
     margin: 5px 0;
   }
 }

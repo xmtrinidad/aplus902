@@ -6,7 +6,7 @@ let $mobileIcons = $(".nav_row");
  */
 $desktopIcons.add($mobileIcons).on("click", function(){
     let $this = $(this);
-    toggleMenu($this);
+    toggleMenu($this); // this is what closes the menu on mobile
     activeIcon($this);
     getTitle($this);
     getSVG($this);
@@ -25,9 +25,11 @@ function toTopAndClose() {
 
     // Close open dropdowns when switching objectives
     $(".show_info").removeClass("show_info");
+    // Put dropdown arrow back to original position
+    $(".arr_down").removeClass("arr_down");
 }
 
-// background color for objective numbers and svg on mobile
+// background color for objective numbers, section title and svg on mobile
 function getBackgroundColor(clicked) {
     let $objectiveNumber = $(".objective_number");
     let $svgContainer = $(".section_svg_container");
@@ -68,17 +70,17 @@ function getSection(clicked) {
     $section.parent().find(sectionClassName).addClass("curr");
 }
 
-// add/remove class to scale icon on desktop_nav
+// get active icon for mobile and desktop
 function activeIcon(clicked) {
     let sectionClassName = getSectionClassName(clicked);
-    let $myRow = $(".my_row");
+    let $myRow = $(".my_row"); // desktop row
     /**
      * Continue to activate clicked icon while screen size is mobile
      */
     if ($(window).width() < 768) {
         $myRow.find(".obj_active").removeClass("obj_active");
         $myRow.find(sectionClassName).addClass("obj_active");
-        // open/close menu when clicking
+        // show objective
     } else {
         $(clicked).parent().find(".obj_active").removeClass("obj_active");
         $(clicked).addClass("obj_active");

@@ -1,11 +1,5 @@
-TODO Give objective info content margin/padding
-
-TODO see if you can fix issue on refresh to going back to first objective
-    TODO maybe on icon clicks, some sort of marker in URL?
-
-
-
-
-TODO fix to top button
-
-TODO add links to professor messer videos
+TODO add links to section 1.0
+TODO add links to section 2.0
+TODO add links to section 3.0
+TODO add links to section 4.0
+TODO add links to section 5.0
